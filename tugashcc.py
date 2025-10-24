@@ -50,11 +50,11 @@ def update(nama):
                 def change(d, bio,new):
                     d.update({bio : new}) 
 
-                if(namaNew!=""): change(d,"nama",namaNew)
-                elif(hobiNew!=""): change(d,"hobi",hobiNew)
-                elif(asalNew!=""): change(d,"asal",asalNew)
-                elif(TLahirNew!=""): change(d,"tanggal lahir",TLahirNew)
-                elif(mottoNew!=""): change(d,"motto",mottoNew)
+                if namaNew != "": change(d, "nama", namaNew)
+                if hobiNew != "": change(d, "hobi", hobiNew)
+                if asalNew != "": change(d, "asal", asalNew)
+                if TLahirNew != "": change(d, "tanggal lahir", TLahirNew)
+                if mottoNew != "": change(d, "motto", mottoNew)
                 print("data berhasil diubah \n")
                 changed=True
 
@@ -107,5 +107,6 @@ while True:
                 break
 
     elif(pilihan =="exit" or pilihan =="5"):
-
+        print("Terima kasih telah menggunakan program ini! jangan lupa bahagia :)")
         break
+
