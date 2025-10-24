@@ -62,10 +62,14 @@ def update(nama):
 def delete(nama):
     global deleted
     deleted = False
-    for d in dataBase:
-        d["nama"] == nama
-        dataBase.remove(d)
-    deleted = True
+    for d in dataBase[:]:  
+        if d["nama"] == nama:
+            dataBase.remove(d)
+            print(f"Data dengan nama '{nama}' berhasil dihapus!\n")
+            deleted = True
+            break  
+    if not deleted:
+        print(f"Data dengan nama '{nama}' tidak ditemukan.\n")
 
 while True:
     print("Pilihan : create|read|update|delete|exit \n")
@@ -103,4 +107,5 @@ while True:
                 break
 
     elif(pilihan =="exit" or pilihan =="5"):
+
         break
